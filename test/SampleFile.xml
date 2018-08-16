@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<smbus xmlns="http://smbus.org/2017/SMBusCommandSequence">
+  <system name="Big Router Project" revision="A" description="example programming operation">
+    <op name="program">
+      <device address="0x03" name="LTC3880" description="mux">
+        <writeByte command="0x00" pec="False">
+          <data>0x00000011</data>
+          <!-- My Comment -->
+        </writeByte>
+        <writeWord command="0x00" pec="False">
+          <data>0x55AA</data>
+          <!-- My Comment -->
+        </writeWord>
+      </device>
+      <device address="0x75" name="MAX9000" description="Maxim Integrated Devices">
+        <sendByte command="0x00" pec="False"/>
+        <writeByte command="0xd0" pec="False">
+          <data>0x03</data>
+          <!-- My Comment -->
+        </writeByte>
+      </device>
+      <device address="0x03" name="LTC2977" description="mux">
+        <writeByte command="0x00" pec="False">
+          <data>0x04</data>
+          <!-- My Comment -->
+        </writeByte>
+      </device>
+    </op>
+    <op name="verify">
+      <device address="0x03" name="LTC3880" description="mux">
+        <writeByte command="0x00" pec="False">
+          <data>0x0011</data>
+          <!-- My Comment -->
+        </writeByte>
+        <readByte command="0x70" pec="False">
+          <expect>0x40</expect>
+          <mask>0x80</mask>
+        </readByte>
+        <readWord command="0x70" pec="False">
+          <expect>0x0040</expect>
+          <mask>0x0080</mask>
+        </readWord>
+      </device>
+      <device address="0x75" name="MAX9000" description="Maxim Integrated Devices">
+        <writeByte command="0xd0" pec="False">
+          <data>0x03</data>
+          <!-- My Comment -->
+        </writeByte>
+      </device>
+      <device address="0x03" name="LTC2977" description="mux">
+        <writeByte command="0x00" pec="False">
+          <data>0804</data>
+          <!-- My Comment -->
+        </writeByte>
+      </device>
+    </op>
+  </system>
+</smbus>
+

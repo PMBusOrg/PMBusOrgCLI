@@ -1,0 +1,5 @@
+nose
+lxml
+camel_snake_kebab
+PyInstaller
+aardvark-py
