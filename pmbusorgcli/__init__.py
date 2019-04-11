@@ -23,7 +23,8 @@ def smbus_step_verbose_string(step):
             ' on address 0x' + step['device_address'].hex() + ': '
         if smbus_transaction != 'receive_byte':
             step_str += ' cmd:' + byte_transmission_str(step['command'])
-        if ((smbus_transaction in
+        if ((smbus_transaction != 'send_byte') and
+            (smbus_transaction in
              smbus_helpers.smbus_transaction_write_types) or
             (smbus_transaction in
              smbus_helpers.smbus_transaction_process_call_types)):
