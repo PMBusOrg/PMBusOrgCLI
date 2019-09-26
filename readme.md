@@ -3,7 +3,7 @@ PMBusOrg CLI
 -----------------
 
 # Note: Prototype Software (and call for interest)
-This software is currently in 'working prototype' status. It is expected that the xml-style format will change to something else. As of Fall 2019 discussions on the direction of this work is being discussed in the PMBus Working Group meetings. If interested, consider joining [PMBus.org](https://pmbus.org)
+This software is currently in 'working prototype' status. It is expected that the xml-style format will change to something else. As of Fall 2019 discussions on the direction of this work is being discussed in the PMBus Working Group meetings. If interested, consider joining [PMBus.org](http://www.pmbus.org)
 
 # Introduction
 
