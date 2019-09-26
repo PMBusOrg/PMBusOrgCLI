@@ -2,6 +2,9 @@
 PMBusOrg CLI
 -----------------
 
+# Note: Prototype Software (and call for interest)
+This software is currently in 'working prototype' status. It is expected that the xml-style format will change to something else. As of Fall 2019 discussions on the direction of this work is being discussed in the PMBus Working Group meetings. If interested, consider joining [PMBus.org](https://pmbus.org)
+
 # Introduction
 
 The PMBus.org Command Line Interface performs pmbus transactions as specified in a standardized PMBus configuration format. Typically this would be used during a time of production to configure (or verify configuration) of . Things are designed generically enough that one could use this as a generic I2C/SMBus scripting tool.
